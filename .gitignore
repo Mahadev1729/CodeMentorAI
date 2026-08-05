@@ -1,1 +1,6 @@
-﻿*.env
+﻿.env
+.env.*
+__pycache__/
+*.pyc
+vectorstore/
+.venv

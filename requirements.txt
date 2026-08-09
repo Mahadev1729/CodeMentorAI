@@ -11,8 +11,7 @@ sentence-transformers>=3.0.0
 tiktoken>=0.7.0
 pygments>=2.18.0
 
-# Optional: PyTorch + torchvision (CPU wheels). If install fails, try adjusting versions
-# and/or the --extra-index-url below for platform-specific wheels.
+
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.2.0+cpu
 torchvision==0.17.0+cpu

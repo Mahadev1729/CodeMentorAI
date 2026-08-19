@@ -19,7 +19,11 @@
 - **🔄 Session State** — Cached results, chat history, and selected files across interactions
 
 
-https://drive.google.com/file/d/1m4XLvZdgIXdzVyxl-RqFiyyZKGXD-VaJ/view?usp=drivesdk
+## 🎥 DEMO VIDEO
+
+[▶️ Watch the Project Demo Video](https://drive.google.com/file/d/1m4XLvZdgIXdzVyxl-RqFiyyZKGXD-VaJ/view?usp=drivesdk)
+
+> Click the link above to watch the complete project demonstration.
 
 ## Tech Stack
 

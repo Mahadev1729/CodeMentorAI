@@ -91,7 +91,7 @@ def explain_file(
     file_path: str,
     file_content: str,
     api_key: str,
-    model: str = "llama-3.3-70b-versatile",
+    model: str = "openai/gpt-oss-20b",
 ) -> str:
     llm = get_llm(api_key, model)
     language = file_path.split(".")[-1] if "." in file_path else "text"

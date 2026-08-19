@@ -59,7 +59,7 @@ Output ONLY the README.md content, starting with the # heading. Do not include a
 def generate_readme(
     repo_path: str,
     api_key: str,
-    model: str = "llama-3.3-70b-versatile",
+    model: str = "openai/gpt-oss-20b",
 ) -> str:
     repo_name = Path(repo_path).name
     folder_tree = build_folder_tree(repo_path, max_depth=4)

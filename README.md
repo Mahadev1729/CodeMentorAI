@@ -18,6 +18,9 @@
 - **⚡ FAISS Vector Search** — Semantic code search with persisted index
 - **🔄 Session State** — Cached results, chat history, and selected files across interactions
 
+
+
+
 ## Tech Stack
 
 | Layer | Technology |

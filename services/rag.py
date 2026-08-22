@@ -35,7 +35,7 @@ Provide a comprehensive answer with the following structure:
 Answer:"""
 
 
-def get_llm(api_key: str, model: str = "llama-3.3-70b-versatile") -> ChatGroq:
+def get_llm(api_key: str, model: str = "openai/gpt-oss-20b") -> ChatGroq:
     return ChatGroq(
         api_key=api_key,
         model=model,

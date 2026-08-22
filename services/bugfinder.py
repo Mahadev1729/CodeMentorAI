@@ -51,7 +51,7 @@ After listing all issues, provide:
 def find_bugs(
     repo_path: str,
     api_key: str,
-    model: str = "llama-3.3-70b-versatile",
+    model: str = "openai/gpt-oss-20b",
 ) -> str:
     repo_name = Path(repo_path).name
     file_contents_parts = []

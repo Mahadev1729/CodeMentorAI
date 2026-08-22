@@ -61,7 +61,7 @@ def ask_question(
     question: str,
     api_key: str,
     chat_history: list[dict] = None,
-    model: str = "llama-3.3-70b-versatile",
+    model: str = "openai/gpt-oss-20b",
 ) -> tuple[str, list[str]]:
     llm = get_llm(api_key, model)
     context, source_files = retrieve_context(vectorstore, question)

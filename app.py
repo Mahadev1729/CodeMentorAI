@@ -657,6 +657,7 @@ def render_sidebar():
         "llama-3.1-8b-instant",
         "mixtral-8x7b-32768",
         "gemma2-9b-it",
+        "openai/gpt-oss-20b"
     ]
     selected_model = st.sidebar.selectbox(
         "LLM Model",
@@ -793,7 +794,8 @@ def render_chat_tab():
                                 q,
                                 st.session_state.groq_api_key,
                                 st.session_state.chat_history[:-1],
-                                st.session_state.get("selected_model", "llama-3.3-70b-versatile"),
+                                st.session_state.get(
+                                    "selected_model", "openai/gpt-oss-20b"),
                             )
                             st.session_state.chat_history.append({
                                 "role": "assistant",
@@ -839,7 +841,7 @@ def render_chat_tab():
                         user_input,
                         st.session_state.groq_api_key,
                         st.session_state.chat_history[:-1],
-                        st.session_state.get("selected_model", "llama-3.3-70b-versatile"),
+                        st.session_state.get("selected_model", "openai/gpt-oss-20b"),
                     )
                     st.markdown(answer)
                     if sources:
@@ -895,7 +897,8 @@ def render_summary_tab():
                 summary = generate_summary(
                     st.session_state.repo_path,
                     st.session_state.groq_api_key,
-                    st.session_state.get("selected_model", "llama-3.3-70b-versatile"),
+                    st.session_state.get(
+                        "selected_model", "openai/gpt-oss-20b"),
                 )
                 st.session_state.summary_cache = summary
                 st.rerun()
@@ -971,7 +974,8 @@ def render_bugs_tab():
                 bug_report = find_bugs(
                     st.session_state.repo_path,
                     st.session_state.groq_api_key,
-                    st.session_state.get("selected_model", "llama-3.3-70b-versatile"),
+                    st.session_state.get(
+                        "selected_model", "openai/gpt-oss-20b"),
                 )
                 st.session_state.bug_cache = bug_report
                 st.rerun()
@@ -1027,7 +1031,8 @@ def render_architecture_tab():
                 arch_text = generate_architecture(
                     st.session_state.repo_path,
                     st.session_state.groq_api_key,
-                    st.session_state.get("selected_model", "llama-3.3-70b-versatile"),
+                    st.session_state.get(
+                        "selected_model", "openai/gpt-oss-20b"),
                 )
                 st.session_state.architecture_cache = arch_text
                 st.rerun()
@@ -1081,7 +1086,8 @@ def render_readme_tab():
                 readme = generate_readme(
                     st.session_state.repo_path,
                     st.session_state.groq_api_key,
-                    st.session_state.get("selected_model", "llama-3.3-70b-versatile"),
+                    st.session_state.get(
+                        "selected_model", "openai/gpt-oss-20b"),
                 )
                 st.session_state.readme_cache = readme
                 st.rerun()
@@ -1192,7 +1198,8 @@ def render_file_explorer_tab():
                                         st.session_state.selected_file,
                                         content,
                                         st.session_state.groq_api_key,
-                                        st.session_state.get("selected_model", "llama-3.3-70b-versatile"),
+                                        st.session_state.get(
+                                            "selected_model", "openai/gpt-oss-20b"),
                                     )
                                     st.session_state[explain_key] = explanation
                                     st.rerun()
